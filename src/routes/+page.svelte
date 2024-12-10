@@ -5,7 +5,7 @@
 
 <main>
     <div>
-        <p class="text-sm ">Made by Ethan Annane</p>
+        <p class="text-sm ">Made by __________</p>
         <h1 class="text-center mt-5 text-5xl ">Australian State Records</h1>
         <p class="text-2xl mt-10 mr-40 ml-40 rounded pt-5 pl-5 pr-5 pb-5 custom-border-gradient">
             The Australian State Record Tracker is a straightforward way to keep up with the top performances in WCA events across all of Australia. It features rankings for each event in every state, so you can easily see who’s at the top in your area and across the country. Whether you're new to speedcubing or have been competing for a while, this website makes it easy to track your own progress, set new goals, and see how you compare to others. It's updated regularly to reflect the latest records, so you’ll always know who’s leading in each event. Whether you're chasing personal bests or just want to see where you stand, this tracker is the go-to spot to stay up to date on the Australian speedcubing.
