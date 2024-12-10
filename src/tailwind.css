@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: rgb(38, 37, 41);
+    color: white;
+}
+
+.svg-black {
+    filter: invert(1);
+  }
+
+.svg-black:hover {
+    filter: none;
+}
+.custom-border-gradient {
+    border-width: 8px; /* Same as the tailwind class border-8 */
+    border-image: linear-gradient(to top right, #4f46e5, #7c3aed, #ec4899) 1;
+    border-radius: 3rem;
+  }
+
+  .svg-white {
+    filter: invert(1);
+  }
+  
+  
+
