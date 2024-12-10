@@ -1,5 +1,7 @@
-export async function load({ params }) {
-    const chosen_event = params.chosen_event;
-
-    return chosen_event;
-}
+export const load = ({ data, params }) => {
+    const chosen_event = params.events;
+    return {
+      chosen_event,
+      ...data
+    }
+  }

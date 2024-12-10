@@ -8,11 +8,11 @@
 
 <div>
     <div class="flex items-center justify-center h-32 gap-10">
-        <EventStamp event="2x2" />
+        <EventStamp event="{data.chosen_event}" />
         <h1 class="text-5xl">
-            {data}
+            {data.chosen_event}
         </h1>
-        <EventStamp event="2x2" />
+        <EventStamp event="{data.chosen_event}" />
     </div>
 </div>
 
