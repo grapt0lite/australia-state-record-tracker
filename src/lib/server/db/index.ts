@@ -1,8 +1,7 @@
 import Database from "better-sqlite3";
-import { DB_PATH } from "$env/static/private";
 import type { Track } from "../../../routes/types";
 
-const db = new Database(DB_PATH, { verbose: console.log });
+const db = new Database('./data/chinook.db', { verbose: console.log });
 
 export function getInitialTracks(): Track[] {
     const sql = `SELECT t.TrackId as trackId,
