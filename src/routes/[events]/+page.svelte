@@ -16,25 +16,29 @@
     </div>
 </div>
 
+{console.log(data.records)}
+
 <h1>Hello!</h1>
 
 <div class="w-[70vw] mx-auto mt-30">
     <table class="table-auto w-full border-collapse">
         <thead>
             <tr>
-                <th class="border rounded px-4 py-2">Track</th>
-                <th class="border px-4 py-2">Artist</th>
-                <th class="border px-4 py-2">Album</th>
-                <th class="border px-4 py-2">Genre</th>
+                <th class="border rounded px-4 py-2">Time</th>
+                <th class="border px-4 py-2">Person</th>
+                <th class="border px-4 py-2">Date</th>
+                <th class="border px-4 py-2">Official</th>
+                <th class="border px-4 py-2">Event</th>
             </tr>
         </thead>
         <tbody>
-            {#each data.tracks as track}
+            {#each data.records as record}
                 <tr>
-                    <td class="border px-4 py-2">{track.track_name}</td>
-                    <td class="border px-4 py-2">{track.artist_name}</td>
-                    <td class="border px-4 py-2">{track.album_title}</td>
-                    <td class="border px-4 py-2">{track.genre}</td>
+                    <td class="border px-4 py-2">{record.record_time}</td>
+                    <td class="border px-4 py-2">{record.person}</td>
+                    <td class="border px-4 py-2">{record.date_set}</td>
+                    <td class="border px-4 py-2">{record.official}</td>
+                    <td class="border px-4 py-2">{record.record_event}</td>
                 </tr>
             {/each}
         </tbody>

@@ -1,5 +1,5 @@
 import { neon } from '@neondatabase/serverless';
-import type { Track } from '../types';
+import type { Record } from '../types';
 import { DATABASE_URL } from '$env/static/private';
 
 const connectionString: string =
@@ -7,14 +7,18 @@ const connectionString: string =
 
 const sql = neon(connectionString);
 
-export async function load() {
+export async function load({ params }) {
+    const chosen_event: string = params.events;
     // Explicitly cast the response to Track[] after the query execution
     const response = await sql`
-        SELECT track_name, artist_name, album_title, genre 
-        FROM tracks
-    ` as unknown as Track[];
+    SELECT * 
+    FROM public.records 
+    WHERE record_event LIKE ${'%' + chosen_event + '%'}
+    ORDER BY record_time ASC
+    ` as unknown as Record[];
 
     return {
-        tracks: response,
+        records: response,
+        chosen_event
     };
 }

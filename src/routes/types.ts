@@ -1,8 +1,9 @@
-export interface Track {
-    track_name: string;
-    artist_name: string;
-    album_title: string;
-    genre: string;
+export interface Record {
+    record_time: string;
+    person: string;
+    date_set: string;
+    offical: string;
+	record_event: string;
 }
 
 
@@ -20,5 +21,5 @@ export type AlbumTrack = {
 };
 
 export type PageData = {
-    tracks: Track[]; // Array of Track objects
+    records: Record[]; // Array of Track objects
 };

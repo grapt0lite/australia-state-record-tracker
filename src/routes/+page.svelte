@@ -25,7 +25,7 @@
             <EventButton event="Skewb" />
             <EventButton event="Pyraminx" />
             <EventButton event="Megaminx" />
-            <EventButton event="Clonk" />
+            <EventButton event="Clock" />
         </div>
         <h1 class=" text-center text-3xl">Special Events</h1>
         <div class="flex items-center justify-center h-64 gap-10">
