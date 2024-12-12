@@ -28,7 +28,8 @@
                 <th class="border px-4 py-2">Person</th>
                 <th class="border px-4 py-2">Date</th>
                 <th class="border px-4 py-2">Official</th>
-                <th class="border px-4 py-2">Event</th>
+                <th class="border px-4 py-2">State</th>
+
             </tr>
         </thead>
         <tbody>
@@ -38,7 +39,7 @@
                     <td class="border px-4 py-2">{record.person}</td>
                     <td class="border px-4 py-2">{record.date_set}</td>
                     <td class="border px-4 py-2">{record.official}</td>
-                    <td class="border px-4 py-2">{record.record_event}</td>
+                    <td class="border px-4 py-2">{record.state}</td>
                 </tr>
             {/each}
         </tbody>
