@@ -1,11 +1,7 @@
-
-
 {
 	"name": "svelte-learning",
 	"version": "0.0.1",
 	"type": "module",
-
-	
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -37,11 +33,14 @@
 	},
 	"dependencies": {
 		"20": "^3.1.9",
+		"@neondatabase/serverless": "^0.10.4",
 		"@types/better-sqlite3": "^7.6.12",
+		"@types/pg": "^8.11.10",
 		"better-sqlite3": "^11.7.0",
+		"pg": "^8.13.1",
 		"sqlite3": "^5.1.7"
 	},
 	"engines": {
-		"node": ">=20.0.0 <21"
+		"node": ">=2.0.0 <21"
 	}
 }

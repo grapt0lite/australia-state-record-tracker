@@ -1,12 +1,10 @@
-export type Track = {
-	trackId: number;
-	trackName: string;
-	albumId: number;
-	albumTitle: string;
-	artistId: number;
-	artistName: string;
-	genre: string;
-};
+export interface Track {
+    track_name: string;
+    artist_name: string;
+    album_title: string;
+    genre: string;
+}
+
 
 export type Album = {
 	albumId: number;

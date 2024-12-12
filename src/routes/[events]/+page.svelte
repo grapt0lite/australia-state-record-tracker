@@ -31,9 +31,9 @@
         <tbody>
             {#each data.tracks as track}
                 <tr>
-                    <td class="border px-4 py-2">{track.trackName}</td>
-                    <td class="border px-4 py-2">{track.artistName}</td>
-                    <td class="border px-4 py-2">{track.albumTitle}</td>
+                    <td class="border px-4 py-2">{track.track_name}</td>
+                    <td class="border px-4 py-2">{track.artist_name}</td>
+                    <td class="border px-4 py-2">{track.album_title}</td>
                     <td class="border px-4 py-2">{track.genre}</td>
                 </tr>
             {/each}
