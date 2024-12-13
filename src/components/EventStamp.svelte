@@ -10,12 +10,7 @@
 
 
 <style>
-    button {
-        transition: 0.4s;
-    }
-   
-    button:hover {
-        width: 150px;
-        height: 150px;
+    .svg-white {
+        filter: invert(1);
     }
 </style>

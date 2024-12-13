@@ -18,8 +18,6 @@
 
 {console.log(data.records)}
 
-<h1>Hello!</h1>
-
 <div class="w-[70vw] mx-auto mt-30">
     <table class="table-auto w-full border-collapse">
         <thead>
