@@ -27,7 +27,6 @@
                 <th class="border px-2 py-2">Rank</th>
                 <th class="border rounded px-4 py-2">Time</th>
                 <th class="border px-4 py-2">Person</th>
-                <th class="border px-4 py-2">Date</th>
                 <th class="border px-4 py-2">State</th>
 
             </tr>
@@ -38,7 +37,6 @@
                     <td class="border px-4 py-2">{i + 1}</td>
                     <td class="border px-4 py-2">{record.record_time}</td>
                     <td class="border px-4 py-2">{record.person}</td>
-                    <td class="border px-4 py-2">{record.date_set}</td>
                     <td class="border px-4 py-2">{record.state}</td>
                 </tr>
             {/each}
@@ -57,7 +55,6 @@
                 <th class="border px-2 py-2">Rank</th>
                 <th class="border rounded px-4 py-2">Time</th>
                 <th class="border px-4 py-2">Person</th>
-                <th class="border px-4 py-2">Date</th>
                 <th class="border px-4 py-2">State</th>
 
             </tr>
@@ -68,7 +65,6 @@
                     <td class="border px-4 py-2">{i + 1}</td>
                     <td class="border px-4 py-2">{record.record_time}</td>
                     <td class="border px-4 py-2">{record.person}</td>
-                    <td class="border px-4 py-2">{record.date_set}</td>
                     <td class="border px-4 py-2">{record.state}</td>
                 </tr>
             {/each}
