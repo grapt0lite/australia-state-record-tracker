@@ -15,7 +15,7 @@ export async function load({ params }) {
     FROM public.records 
     WHERE record_event LIKE ${chosen_event}
         AND r_type LIKE 'single'
-    ORDER BY record_time ASC
+    ORDER BY CAST(record_time AS NUMERIC) ASC
     ` as unknown as Record[];
 
     const response_average = await sql`
@@ -23,7 +23,7 @@ export async function load({ params }) {
     FROM public.records 
     WHERE record_event LIKE ${chosen_event}
         AND r_type LIKE 'average'
-    ORDER BY record_time ASC
+    ORDER BY CAST(record_time AS NUMERIC) ASC
     ` as unknown as Record[];
 
     return {
