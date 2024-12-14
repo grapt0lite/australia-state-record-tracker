@@ -8,7 +8,7 @@
 <main>
     <div>
         <div>
-            <h1 class="text-center mt-5 text-5xl ">Australian Unnoficial Records</h1>
+            <h1 class="text-center mt-5 text-5xl ">Australian Unoficial Records</h1>
         </div>
         <div class="text-2xl mt-10 mr-40 ml-40 rounded pt-5 pl-5 pr-5 pb-5 custom-border-gradient">
             The Australian Unnoficial Records Tracker is a simple way to keep up with the top performances in WCA events across all of Australia. It features rankings for each event in every state, so you can easily see who’s at the top in your area and across the country. Click on an event to start, or submit your record in the Oceania Cubing Discord Server.
