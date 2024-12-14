@@ -93,12 +93,12 @@
                         <option>5x5</option>
                         <option>6x6</option>
                         <option>7x7</option>
-                        <option>3bld</option>
-                        <option>4bld</option>
-                        <option>5bld</option>
+                        <option>3x3 Blindfolded</option>
+                        <option>4x4 Blindfolded</option>
+                        <option>5x5 Blindfolded</option>
                         <option>Multiblind</option>
                         <option>FMC</option>
-                        <option>OH</option>
+                        <option>One Handed</option>
                         <option>Pyraminx</option>
                         <option>Megaminx</option>
                         <option>Square-1</option>
