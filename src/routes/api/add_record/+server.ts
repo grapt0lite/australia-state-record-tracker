@@ -13,10 +13,20 @@ export async function POST({ request }) {
       return json({ error: 'All values are required' }, { status: 400 });
     }
 
-    await sql`
-      INSERT INTO public.records (record_time, person, record_event, state, r_type)
-      VALUES (${result}, ${person}, ${record_event}, ${state}, ${r_type})
-    `;
+    // Delete the existing record
+  await sql`
+  DELETE FROM public.records
+  WHERE person = ${person}
+    AND record_event = ${record_event}
+    AND r_type = ${r_type};
+  `;
+
+  // Insert the new record
+  await sql`
+  INSERT INTO public.records (record_time, person, record_event, state, r_type)
+  VALUES (${result}, ${person}, ${record_event}, ${state}, ${r_type});
+  `;
+
 
     return json({ success: true }, { status: 200 });
   } catch (error) {
