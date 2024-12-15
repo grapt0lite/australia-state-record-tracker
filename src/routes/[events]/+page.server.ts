@@ -14,17 +14,16 @@ export async function load({ params }) {
 SELECT *,
        CASE 
            WHEN record_time LIKE '%/% %' THEN 
-               -- Compute the ranking value for 12/13 45:56.32
-               CAST(SPLIT_PART(SPLIT_PART(record_time, ' ', 1), '/', 1) AS NUMERIC) - 
-               (CAST(SPLIT_PART(SPLIT_PART(record_time, ' ', 1), '/', 2) AS NUMERIC) - 
-                CAST(SPLIT_PART(SPLIT_PART(record_time, ' ', 1), '/', 1) AS NUMERIC))
+               -- Calculate the total points: X - (Y - X) = 2X - Y
+               (2 * CAST(SPLIT_PART(SPLIT_PART(record_time, ' ', 1), '/', 1) AS NUMERIC)) - 
+               CAST(SPLIT_PART(SPLIT_PART(record_time, ' ', 1), '/', 2) AS NUMERIC)
            ELSE 
-               -- Default ranking value for normal times
+               -- Default points if not in multiblind format
                0
-       END AS rank_value,
+       END AS points,
        CASE 
            WHEN record_time LIKE '%/% %' THEN 
-               -- Convert minute:second.millisecond to total seconds for 12/13 format
+               -- Convert minute:second.millisecond to total seconds for multiblind time
                (CAST(SPLIT_PART(SPLIT_PART(record_time, ' ', 2), ':', 1) AS NUMERIC) * 60) + 
                CAST(SPLIT_PART(SPLIT_PART(record_time, ' ', 2), ':', 2) AS NUMERIC)
            WHEN record_time LIKE '%:%' THEN 
@@ -38,9 +37,12 @@ SELECT *,
 FROM public.records
 WHERE record_event LIKE ${chosen_event}
   AND r_type LIKE 'single'
-ORDER BY rank_value ASC, time_in_seconds ASC;
+ORDER BY points DESC, time_in_seconds ASC;
+
 
     ` as unknown as Record[];
+
+    console.log(response_single)
 
     const response_average = await sql`
 SELECT *,
@@ -69,7 +71,7 @@ SELECT *,
        END AS time_in_seconds
 FROM public.records
 WHERE record_event LIKE ${chosen_event}
-  AND r_type LIKE 'average'
+  AND r_type LIKE 'single'
 ORDER BY rank_value ASC, time_in_seconds ASC;
     ` as unknown as Record[];
 
