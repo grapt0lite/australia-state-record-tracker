@@ -3,8 +3,7 @@
     import EventStamp from '../../components/EventStamp.svelte';
     import type { PageData } from "../$types";
     export let data: PageData;
-    import FlagButton from '../../components/FlagButton.svelte';
-    const flagHandler = async (e: Event, id) => {
+    const flagHandler = async (e: Event, id: number) => {
         e.preventDefault();
         
         try {
@@ -27,7 +26,7 @@
             }
         } catch (error) {
             console.error('Submission error:', error);
-            alert('Failed to submit record');
+            alert('Failed to flag record');
         }
     };
 </script>
@@ -63,7 +62,7 @@
                 <tr>
                     <td class="border px-4 py-2 flex items-center space-x-2">
                         <span>{i + 1}</span>
-                        <svg on:click={(e) => flagHandler(e, record.id)} class="h-7 w-7 fill-current text-white " height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        <svg on:click={(e) => flagHandler(e, record.id)} class="h-5 w-5 fill-current text-white " height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                         viewBox="0 0 65.456 65.456" xml:space="preserve">
                             <g>
                                 <path d="M57.427,5.031C53.76,1.646,49.895,0,45.611,0c-5.052,0-9.663,2.314-14.123,4.553c-4.012,2.014-7.801,3.916-11.432,3.916
@@ -107,7 +106,7 @@
                 <tr>
                     <td class="border px-4 py-2 flex items-center space-x-2">
                         <span>{i + 1}</span>
-                        <svg on:click={(e) => flagHandler(e, record.id)} class="h-7 w-7 fill-current text-white " height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        <svg on:click={(e) => flagHandler(e, record.id)} class="h-5 w-5 fill-current text-white " height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                         viewBox="0 0 65.456 65.456" xml:space="preserve">
                             <g>
                                 <path d="M57.427,5.031C53.76,1.646,49.895,0,45.611,0c-5.052,0-9.663,2.314-14.123,4.553c-4.012,2.014-7.801,3.916-11.432,3.916

@@ -1,10 +1,12 @@
 export interface Record {
     record_time: string;
     person: string;
-    date_set: string;
-    offical: string;
 	record_event: string;
+    state: string;
+    id: number;
+    chosen_event: any;
 }
 export type PageData = {
-    records: Record[]; // Array of Track objects
+    records: Record[];
+    chosen_event: any; // Array of Track objects
 };
