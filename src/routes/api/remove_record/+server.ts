@@ -19,6 +19,11 @@ export async function POST({ request }) {
     WHERE id = ${id}
     `;
 
+    await sql`
+    DELETE FROM public.records
+    WHERE id = ${id}
+    `;
+
     return json({ success: true }, { status: 200 });
   } catch (error) {
     console.error('Database error:', error);

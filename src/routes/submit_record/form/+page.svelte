@@ -1,11 +1,10 @@
 <script lang="ts">
     import '../../../tailwind.css';
-    let fullName = "";
+    let fullName = "Nicholas Mouratidis";
     let result = "";
     let event = "";
     let state = "";
     let type = "";
-
     const handleSubmit = async (e: Event) => {
         e.preventDefault();
         

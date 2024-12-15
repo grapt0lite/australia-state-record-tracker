@@ -127,7 +127,7 @@
     Average
 </h1>
 
-<div class="w-[70vw] mx-auto mt-30">
+<div class="w-[70vw] mx-auto mt-30 mb-20">
     <table class="table-auto w-full border-collapse">
         <thead>
             <tr>

@@ -15,14 +15,9 @@ export async function POST({ request }) {
 
     // Move the entry from the records table to flagged table
     await sql`
-      WITH moved AS (
-        DELETE FROM public.flagged
-        WHERE id = ${id}
-        RETURNING *
-      )
-      INSERT INTO public.records (record_time, person, record_event, state, r_type)
-      SELECT record_time, person, record_event, state, r_type
-      FROM moved
+      DELETE FROM public.flagged
+      WHERE id = ${id}
+      RETURNING *
     `;
 
     return json({ success: true }, { status: 200 });
