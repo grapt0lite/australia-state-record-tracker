@@ -41,10 +41,11 @@
         <EventStamp event="{data.chosen_event}" />
     </div>
 </div>
-
+{#if data.chosen_event != "Multiblind"}
 <h1 class="flex items-center justify-center h-32 gap-10 text-5xl">
     Single
 </h1>
+{/if}
 
 <div class="w-[70vw] mx-auto mt-30">
     <table class="table-auto w-full border-collapse">
@@ -85,6 +86,7 @@
     </table>
 </div>
 
+{#if data.chosen_event != "Multiblind" }
 <h1 class="flex items-center justify-center h-32 gap-10 text-5xl mt-20">
     Average
 </h1>
@@ -128,6 +130,8 @@
         </tbody>
     </table>
 </div>
+
+{/if}
 
 <style>
     .custom-border-gradient {
