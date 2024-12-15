@@ -71,7 +71,7 @@ SELECT *,
        END AS time_in_seconds
 FROM public.records
 WHERE record_event LIKE ${chosen_event}
-  AND r_type LIKE 'single'
+  AND r_type LIKE 'average'
 ORDER BY rank_value ASC, time_in_seconds ASC;
     ` as unknown as Record[];
 
