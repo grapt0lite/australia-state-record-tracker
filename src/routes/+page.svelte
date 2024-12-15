@@ -12,6 +12,7 @@
         </div>
         <div class="text-2xl mt-10 mr-40 ml-40 rounded pt-5 pl-5 pr-5 pb-5 custom-border-gradient">
             The Australian Unofficial Records Tracker is a simple way to keep up with the top performances in WCA events across all of Australia. It features rankings for each event in every state, so you can easily see who’s at the top in your area and across the country. Click on an event to start, or submit your record <a href="/submit_record/form" class="text-purple-500">here</a>.
+            *NOTICE* Keep in mind that this very much a young and unfinished project, and lots of things will eithor break, look bad, or not work.
         </div>        
         <h1 class="mt-20 text-center text-3xl">NxN</h1>
         <div class="flex items-center justify-center h-64 gap-10">
